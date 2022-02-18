@@ -1,1 +1,1 @@
-<a href="https://marikalazorsky.github.io/foods/">Demo</a>
+<a href="https://marikalazorsky.github.io/foods/" target="_blank">Demo</a>
