@@ -10,6 +10,14 @@ var gulp       = require('gulp'),
 	cache        = require('gulp-cache'),
 	autoprefixer = require('gulp-autoprefixer');
 
+	var gulp = require('gulp');
+	var ghPages = require('gulp-gh-pages');
+
+	gulp.task('deploy', function() {
+	return gulp.src('./build/**/*')
+		.pipe(ghPages());
+	});
+
 gulp.task('sass', function() {
 	return gulp.src('src/scss/**/*style.scss')
 		.pipe(sass())
@@ -84,3 +92,5 @@ gulp.task('watch', function() {
 });
 gulp.task('default', gulp.parallel('sass', 'scripts', 'browser-sync', 'watch'));
 gulp.task('build', gulp.parallel('prebuild', 'clean', 'img', 'sass', 'scripts'));
+
+
